@@ -1,0 +1,24 @@
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
+<script type="text/javascript">
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
+</script>
+
+<div class="sound">
+<p>1枚目</p>
+<p>
+<%= audio_tag("nc18763.mp3", :autoplay => false, :controls => true) %>
+</p>
+
+<p>2枚目</p>
+<p>
+<%= audio_tag("nc38022.mp3", :autoplay => false, :controls => true) %>
+</p>
+</div>
