@@ -1,0 +1,13 @@
+diff a/Gemfile b/Gemfile	(rejected hunks)
+@@ -49,4 +49,9 @@
+ 
+ gem 'gmaps4rails'
+ 
+-gem 'geocoder'
+\ No newline at end of file
++gem 'geocoder'
++
++group :production, :staging do
++  gem 'rails_12factor'
++end
++

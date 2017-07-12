@@ -11,14 +11,41 @@
     });
 </script>
 
-<div class="sound">
-<p>1枚目</p>
-<p>
-<%= audio_tag("nc18763.mp3", :autoplay => false, :controls => true) %>
-</p>
+<div class="bs-docs-section">
 
-<p>2枚目</p>
-<p>
-<%= audio_tag("nc38022.mp3", :autoplay => false, :controls => true) %>
-</p>
-</div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-header">
+          <h1 id="nav">Navs</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <h2 id="nav-tabs">Tabs</h2>
+        <div class="bs-component">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#sound1" data-toggle="tab">1枚目</a></li>
+            <li><a href="#sound2" data-toggle="tab">2枚目</a></li>
+            <li><a href="#sound3" data-toggle="tab">3枚目</a></li>
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="sound1">
+              <p><%= audio_tag("001_170705_0332V0.MP3", :autoplay => false, :controls => true) %></p>
+            </div>
+            <div class="tab-pane fade" id="sound2">
+              <p><%= audio_tag("001_170705_0549V0.MP3", :autoplay => false, :controls => true) %></p>
+            </div>
+            <div class="tab-pane fade" id="sound3">
+              <p><%= audio_tag("002_170705_0551V0.MP3", :autoplay => false, :controls => true) %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+        <br>
+      </div>
+
+      </div>
+    </div>
+
